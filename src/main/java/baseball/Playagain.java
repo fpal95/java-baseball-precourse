@@ -3,12 +3,9 @@ import nextstep.utils.Console;
 
 public class Playagain {
     public boolean playagain(){
-        System.out.println("경기를 다시 시작하겠습니까? 다시 시작 : 1, 종료 : 2");
-        Console console = new Console;
-        char answer = console.readLine().charAt(0);
-        if(answer=='1'){
-            return true;
-        }
-        return false;
+        System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요");
+        char answer = Console.readLine().charAt(0);
+
+        return answer=='1';
     }
 }
