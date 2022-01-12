@@ -11,6 +11,7 @@ public class Player {
         List<Integer> playernum = new ArrayList<>();
         String input = Console.readLine();
         IsWrong(input);
+        IsDuplicate(input);
 
         for(String number: input.split("")){
             playernum.add(Integer.parseInt(number));
@@ -21,6 +22,17 @@ public class Player {
     public void IsWrong(String input){
         if(input.length() != 3){
             throw new IllegalArgumentException("세 자리 수를 입력해주세요.");
+        }
+    }
+
+    public void IsDuplicate(String input){
+        List<String> checkduplicate = new ArrayList<>();
+        for(String number: input.split("")){
+            if(checkduplicate.contains(number)){
+                throw new IllegalArgumentException("서로 다른 숫자를 입력해주세요.");
+            }else{
+                checkduplicate.add(number);
+            }
         }
     }
 }
