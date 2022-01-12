@@ -6,7 +6,7 @@ public class Application {
     public static void main(String[] args) {
         // TODO 숫자 야구 게임 구현
         GenerateNum random = new GenerateNum();
-        Input player = new Player();
+        Player player = new Player();
         Judge judge = new Judge();
         Playagain playagain = new Playagain();
         boolean again = true;
