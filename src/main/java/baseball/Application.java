@@ -19,7 +19,9 @@ public class Application {
                 result = judge.statement(computer, playernum);
                 System.out.println(result);
             }
+            System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 끝");
             again = playagain.playagain();
         }
+        System.out.println("게임이 종료되었습니다");
     }
 }
